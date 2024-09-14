@@ -34,7 +34,7 @@ def main(img_path):
     frame = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
 
     # 입력 이미지에서 얼굴 위치 찾기
-    # 여러 명의 얼굴도 인식 가능 : 프로젝트 요구사항에 따라 예외 처리 필
+    # 여러 명의 얼굴도 인식 가능 : 프로젝트 요구사항에 따라 예외 처리 필요
     bounding_boxes, points = imgProcessing.detect_faces(frame)
     points = points.T
 
@@ -51,12 +51,12 @@ def main(img_path):
         inp[..., 2] -= 123.68
         inp = np.expand_dims(inp, axis=0)
 
-        # 이미지로부 표정 예측
+        # 이미지로부터 표정 예측
         scores = model.predict(inp)[0]
         print(idx_to_class[np.argmax(scores)])
 
 
 if __name__ == "__main__":
     main(
-        img_path=sys.argv[1]
+        img_path=sys.argv[1]  # s3 url
     )
