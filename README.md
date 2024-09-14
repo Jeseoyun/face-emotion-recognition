@@ -3,7 +3,7 @@
 
 ## 테스트 서버 환경
 
-- 운영체제: Windows
+- OS: Windows
 - Python 버전: 3.10.12
 - TensorFlow 버전: 2.10.0
 - 기타 라이브러리 버전: `requirements.txt` 파일 참고
@@ -11,6 +11,9 @@
 ## 사용 방법
 
 ### 1. 가상환경 생성 및 라이브러리 설치
+```bash
+python -m venv venv
+```
 아래 라이브러리는 필수 설치
 ```bash
 pip install tensorflow
