@@ -53,7 +53,12 @@ def main(img_path):
 
         # 이미지로부터 표정 예측
         scores = model.predict(inp)[0]
-        print(idx_to_class[np.argmax(scores)])
+        result = idx_to_class[np.argmax(scores)]
+        print(result)
+
+        # 결과 저장
+        with open("results/res.txt", "w") as f:
+            f.write(result)
 
 
 if __name__ == "__main__":
