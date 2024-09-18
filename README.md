@@ -1,5 +1,8 @@
 # face-emotion-recognition
+
 제공된 이미지를 분석하여 표정을 인식하고 그 결과를 출력합니다.
+
+This project is based on HSEmotion (High-Speed face Emotion recognition) library (https://github.com/av-savchenko/face-emotion-recognition) licensed under the Apache License 2.0. Significant modifications have been made to the original code.
 
 ## 테스트 서버 환경
 
